@@ -77,8 +77,8 @@ def linear_adjustment(goal:list):
         lin_err_pre = lin_err
         pub.publish(Loco)
     linear_adjust = True
-    #Loco.linear.x = 0.00
-    pub.publish(Twist)
+    Loco.linear.x = 0.00
+    pub.publish(Loco)
     print("current co-ordinates are:",(x_coord,y_coord,theta))
     print("goal reached")
     return linear_adjust
